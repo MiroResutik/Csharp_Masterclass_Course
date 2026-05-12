@@ -302,10 +302,35 @@ Console.ReadKey();
 
 //For loop
 
-
+// Basic loop
 for (int i = 0; i < 10; i++)
 {
     Console.WriteLine("I is " +i);
 }
+
+//count up loop
+for (int counter = 5;counter <= 11; counter++)
+{
+    Console.WriteLine("Couter is " + counter);
+}
+//count down loop
+for (int counter = 10; counter >= 0; counter--)
+{
+    Console.WriteLine("Couter is " + counter);
+}
+
+// in strings \ is an "Escape Character"
+// \n stads for new line
+// \r - carriage return
+
+string myString = "Hi \r\nHi";
+
+for (int counter = 10; counter >= 0; counter--)
+{
+    Console.WriteLine("Counter is " + counter);
+    //Console.WriteLine(myString);
+    Thread.Sleep(1000); //put the application to sleep for 1000 ms
+}
+
 Console.ReadKey();
 
