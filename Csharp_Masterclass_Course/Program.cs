@@ -436,7 +436,7 @@ myIntArray[3] = 20;
 myIntArray[4] = 25;
 
 Console.WriteLine(myIntArray[0]);
-*/
+
 //Declaring and setting values for arrays in the same line
 //declare array
 int[] myIntArray = [5, 10, 15, 20, 25];
@@ -455,6 +455,24 @@ foreach (string day in myStrigArray)
 {
     Console.WriteLine(day);
 }
+*/
+//Two dimentional arrays
+int[,] array2DDeclaration = new int[3,3];
+//Three dimentional arrays
+int[,,] array3DDeclaration = new int[3, 3,3];
+
+int[,] array2DIniziliazed = { {1,2,3}, {4,5,6} };
+
+Console.WriteLine(array2DIniziliazed[0,0]);
+
+string[,] ticTacToeField =
+{
+    {"O","X","X" },
+    {"O","O","X" },
+    {"X","X","O" }
+};
+Console.WriteLine(ticTacToeField[1,2]);
+
 
 Console.ReadKey();
 
