@@ -299,7 +299,7 @@ else
 Console.ReadKey();
 */
 //Loops
-
+/*
 //For loop
 
 // Basic loop
@@ -330,6 +330,130 @@ for (int counter = 10; counter >= 0; counter--)
     Console.WriteLine("Counter is " + counter);
     //Console.WriteLine(myString);
     Thread.Sleep(1000); //put the application to sleep for 1000 ms
+}
+*/
+//while loop
+/*
+for (int i = 0;i < 10; i++)
+{
+    Console.WriteLine(i);
+}
+//same as above
+int counter = 0;
+while (counter < 10)
+{
+    Console.WriteLine(counter);
+    counter++;
+}
+
+Console.WriteLine("While loop method exercise \n\nEnter go or stay");
+
+string userChoice = Console.ReadLine();
+
+while (userChoice == "go")
+{
+    Console.WriteLine("Go for a mile!");
+    Console.WriteLine("Wanna keep going? Enter go.");
+    userChoice = Console.ReadLine();
+
+}
+Console.WriteLine("Finally you are staying!");
+*/
+//Guess the number challange using while loop
+/*
+Random random = new Random();
+int secretNumber = random.Next(1,101);
+int userGuess = 0;
+int counter = 0;
+
+Console.WriteLine("Guess number excercise using while loop \n\nGuess the number I'm thinking of between 1 and 100!");
+
+while (userGuess != secretNumber)
+{
+    counter++;
+    Console.WriteLine("Enter your guess: ");
+    userGuess = int.Parse(Console.ReadLine());
+    if (userGuess < secretNumber)
+    {
+        Console.WriteLine("Too low! Try again. ");
+
+    }
+    else if (userGuess > secretNumber)
+    {
+        Console.WriteLine("Too high! Try again. ");
+    }
+    else {
+        Console.WriteLine("Congratulations! You guessed the right number!\nIt took you {0} numbers of tries!", counter);
+
+         }
+
+}
+*/
+//Do while loops
+/*
+int number;
+
+// do-while loop is a post test loop
+Console.WriteLine("do-while loop is a post test loop\n");
+do
+{
+    Console.WriteLine("Enter a positive whole number: ");
+    number = int.Parse(Console.ReadLine());
+
+} while (number <=0);
+Console.WriteLine("Finally!!!\n");
+
+//Brake and continue in loops
+Console.WriteLine("Brake and continue in loops method\n");
+for (int i = 0; i < 10; i++)
+{
+    Console.WriteLine(i);
+    if (i == 3)
+    {
+        //Console.WriteLine("I've had enough!");
+        continue;
+    }
+    Console.WriteLine(i);
+}
+*/
+//Arrays
+/*
+//Simple arrays
+
+int num1 = 0;
+int num2 = 0;
+int num3 = 0;
+int num4 = 0;
+int num5 = 0;
+
+//declare array
+int[] myIntArray = new int[5];
+
+myIntArray[0] = 5;
+myIntArray[1] = 10;
+myIntArray[2] = 15;
+myIntArray[3] = 20;
+myIntArray[4] = 25;
+
+Console.WriteLine(myIntArray[0]);
+*/
+//Declaring and setting values for arrays in the same line
+//declare array
+int[] myIntArray = [5, 10, 15, 20, 25];
+
+string[] myStrigArray = ["Mon", "Tue", "Wed", "Thurs", "Fri", "Sat", "Sun"];
+
+Console.WriteLine("Lenght of weekdays Array is: " + myStrigArray.Length);
+Console.WriteLine(myIntArray[0]);
+Console.WriteLine("Today is " + myStrigArray[3]);
+//Dispaly all array elements
+for (int i = 0; i < myStrigArray.Length; i++)
+{
+    Console.WriteLine(myStrigArray[i]);
+}
+foreach (string day in myStrigArray)
+{
+    Console.WriteLine(day);
 }
 
 Console.ReadKey();

@@ -7,6 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Csharp_Masterclass_Course",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizApp", "QuizApp\QuizApp.csproj", "{8E44458F-B3FD-4EB7-AF90-4C1EE401D632}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoopsBasic", "LoopsBasic\LoopsBasic.csproj", "{FAAB5D69-3E3B-4BB7-A121-4379482ACB68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextAdventureGame", "TextAdventureGame\TextAdventureGame.csproj", "{2540FBF4-F46A-4507-94DE-CF65EF68579E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvregeScoreCalculator", "AvregeScoreCalculator\AvregeScoreCalculator.csproj", "{98464E52-75AD-4D4F-94EC-D75D68B9CA9E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +27,18 @@ Global
 		{8E44458F-B3FD-4EB7-AF90-4C1EE401D632}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E44458F-B3FD-4EB7-AF90-4C1EE401D632}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E44458F-B3FD-4EB7-AF90-4C1EE401D632}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAAB5D69-3E3B-4BB7-A121-4379482ACB68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAAB5D69-3E3B-4BB7-A121-4379482ACB68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAAB5D69-3E3B-4BB7-A121-4379482ACB68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAAB5D69-3E3B-4BB7-A121-4379482ACB68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2540FBF4-F46A-4507-94DE-CF65EF68579E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2540FBF4-F46A-4507-94DE-CF65EF68579E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2540FBF4-F46A-4507-94DE-CF65EF68579E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2540FBF4-F46A-4507-94DE-CF65EF68579E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98464E52-75AD-4D4F-94EC-D75D68B9CA9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98464E52-75AD-4D4F-94EC-D75D68B9CA9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98464E52-75AD-4D4F-94EC-D75D68B9CA9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98464E52-75AD-4D4F-94EC-D75D68B9CA9E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
