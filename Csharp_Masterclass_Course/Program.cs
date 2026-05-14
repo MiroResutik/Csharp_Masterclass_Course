@@ -455,7 +455,7 @@ foreach (string day in myStrigArray)
 {
     Console.WriteLine(day);
 }
-*/
+
 //Two dimentional arrays
 int[,] array2DDeclaration = new int[3,3];
 //Three dimentional arrays
@@ -472,6 +472,8 @@ string[,] ticTacToeField =
     {"X","X","O" }
 };
 Console.WriteLine(ticTacToeField[1,2]);
+*/
+
 
 
 Console.ReadKey();
