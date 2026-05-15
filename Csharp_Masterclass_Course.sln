@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherStationSimulator", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculateAverageTempExcercise", "CalculateAverageTempExcercise\CalculateAverageTempExcercise.csproj", "{EC22F291-85D6-4AFF-9DC4-273A9CE5D7E8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalassesApp", "CalassesApp\CalassesApp.csproj", "{60597B9B-BD0A-4A2C-B8BE-7DF4BD8E0364}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{EC22F291-85D6-4AFF-9DC4-273A9CE5D7E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC22F291-85D6-4AFF-9DC4-273A9CE5D7E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC22F291-85D6-4AFF-9DC4-273A9CE5D7E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60597B9B-BD0A-4A2C-B8BE-7DF4BD8E0364}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60597B9B-BD0A-4A2C-B8BE-7DF4BD8E0364}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60597B9B-BD0A-4A2C-B8BE-7DF4BD8E0364}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60597B9B-BD0A-4A2C-B8BE-7DF4BD8E0364}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
