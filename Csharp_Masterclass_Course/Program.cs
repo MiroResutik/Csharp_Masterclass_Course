@@ -473,8 +473,14 @@ string[,] ticTacToeField =
 };
 Console.WriteLine(ticTacToeField[1,2]);
 */
+//Mixing doubles and ints when calculating
+/*
+int myInt = 5;
+double myDouble = 8.1;
+//int myIntResult = myInt / myDouble;
+double myIntResult = myInt / myDouble;
 
-
-
+Console.WriteLine(myIntResult);
+*/
 Console.ReadKey();
 
