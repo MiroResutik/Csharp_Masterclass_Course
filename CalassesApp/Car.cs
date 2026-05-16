@@ -60,8 +60,13 @@ namespace CalassesApp
             IsLuxury = isLuxury;
 
 
-            Console.WriteLine("An " + Brand + " of the model " + Model + " with engine " + Engine + " "+ EngineConfig+" has been created!");
+            Console.WriteLine("\n\nAn " + Brand + " of the model " + Model + " with engine " + Engine + " "+ EngineConfig+" has been created!");
             
+        }
+        //Not returning anything
+        public void Drive()
+        {
+            Console.WriteLine($"\nThis is a Drive Method: I'm driving a {Brand} {Model} {Engine} {EngineConfig}");
         }
     }
 }
