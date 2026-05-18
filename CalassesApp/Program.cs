@@ -4,6 +4,7 @@
     {
         static void Main(string[] args)
         {
+            /*
             Console.WriteLine(AddNum(15,25));
             //Named Parameter
             Console.WriteLine(AddNum(num1: 23,25));
@@ -14,7 +15,7 @@
             //This would never work as we never set the Area
             //rectangle1.Area = 5;
             Console.WriteLine($"Area of the rectangel is: {rectangle1.Area}");
-
+            */
             /*
             //Object of the Customer class
             Customer earl = new Customer("Earl", "Earl street", "");
@@ -63,9 +64,9 @@
             */
             Console.ReadKey();
         }
-        static int AddNum(int num1, int num2)
-        {
-            return num1 + num2;
-        }
+        //static int AddNum(int num1, int num2)
+        //{
+        //    return num1 + num2;
+        //}
     }
 }
