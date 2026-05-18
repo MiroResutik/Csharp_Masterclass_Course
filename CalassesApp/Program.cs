@@ -4,6 +4,37 @@
     {
         static void Main(string[] args)
         {
+
+            Rectangle rectangle1 = new Rectangle("Red");
+            Rectangle rectangle2 = new Rectangle("Blue");
+
+            rectangle1.DispalyDetails();
+            rectangle2.DispalyDetails();
+
+            /*
+            Customer customer1 = new Customer();
+            Customer customer2 = new Customer("Miro", "Brezno", "0788");
+            Customer customer3 = new Customer("Earl", "Earl street", "");
+             
+            customer1.GetDetails();
+            customer2.GetDetails();
+            customer3.GetDetails();
+
+            // Assign password to user
+            customer3.Password = "1234";
+
+            Console.WriteLine("Customer 3 id number is: " +customer3.Id);
+            */
+
+            /*
+            Car car = new Car();
+            Car car1 = new Car("Brera", "Alfa Romeo", "3.2L", "V6", true);
+            Car car2 = new Car("A3", "Audi", "4.4L", "V8", true);
+
+            //Accessing the public static variable NubmerOfCars fo the Car class
+            Console.WriteLine("\nNumber of cars produced: " + Car.NumberOfCars);
+            */
+
             /*
             Console.WriteLine(AddNum(15,25));
             //Named Parameter
@@ -64,9 +95,12 @@
             */
             Console.ReadKey();
         }
-        //static int AddNum(int num1, int num2)
-        //{
-        //    return num1 + num2;
-        //}
+        /*
+        //Read only property
+        static int AddNum(int num1, int num2)
+        {
+            return num1 + num2;
+        }
+        */
     }
 }

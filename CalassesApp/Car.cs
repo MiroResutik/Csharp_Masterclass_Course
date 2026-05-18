@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace CalassesApp
 {
+    //Access Modifier internal
     internal class Car
     {
+
+        public static int NumberOfCars = 0;
+        
         //memeber variable
         //private hides the variable form other classes starts with _
         private string _model = "";
@@ -53,6 +57,9 @@ namespace CalassesApp
         //Constructor - is called whenever creating an object of given class
         public Car(string model, string brand, string engine, string engineConfig, bool isLuxury)
         {
+            //Increment number of cars
+            NumberOfCars++;
+
             Model = model;
             Brand = brand;
             Engine = engine;   
@@ -62,6 +69,10 @@ namespace CalassesApp
 
             Console.WriteLine("\n\nAn " + Brand + " of the model " + Model + " with engine " + Engine + " "+ EngineConfig+" has been created!");
             
+        }
+        public Car()
+        {
+            NumberOfCars++;
         }
         //Not returning anything
         public void Drive()

@@ -8,13 +8,27 @@ namespace CalassesApp
 {
     internal class Customer
     {
+        //Static field to hold the next ID available
+        private static int nextId = 0;
+
+        // Unique identifier for customer
+        private readonly int _id;
+
+        // Read only property doesnt use set; and returns _id
+        public int Id { get {return _id;} 
+        }
         public string Name { get; set; }
         public string Address { get; set; }
         public string ContactNumber { get; set; }
+        private string _password;
+        //Write only property
+        public string Password { set { _password = value; } } 
 
         //Default constructor
         public Customer()
         {
+            // Increment id number by one
+            _id = nextId++;
             Name = "DefaultName";
             Address = "Uknown";
             ContactNumber = "No Number";
@@ -25,10 +39,15 @@ namespace CalassesApp
 
         public Customer(string name, string address = "NotAplicaple", string contactNumber = "")
         {
+            _id = nextId++;
             Name = name;
             Address = address;
             ContactNumber = contactNumber;
 
+        }
+        public void GetDetails()
+        {
+            Console.WriteLine($"Detail about the cutomer: Name is {Name} and ID is {_id}");
         }
         //public Customer(string name)
         //{
