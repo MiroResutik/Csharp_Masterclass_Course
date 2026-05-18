@@ -4,9 +4,20 @@
     {
         static void Main(string[] args)
         {
+            Console.WriteLine(AddNum(15,25));
+            //Named Parameter
+            Console.WriteLine(AddNum(num1: 23,25));
+            
+            Rectangle rectangle1 = new Rectangle();
+            rectangle1.Width = 5;
+            rectangle1.Height = 5;
+            //This would never work as we never set the Area
+            //rectangle1.Area = 5;
+            Console.WriteLine($"Area of the rectangel is: {rectangle1.Area}");
+
             /*
-            //Object
-            Customer earl = new Customer("Earl");
+            //Object of the Customer class
+            Customer earl = new Customer("Earl", "Earl street", "");
             Customer miro = new Customer("Miro", "Bristol", "07912028579");
 
             //Default Customer with no Arguments given
@@ -14,14 +25,17 @@
             Customer myCustomer = new Customer();
             Console.WriteLine("Please enter the customer name, address and number! Hit enter after each one!");
 
-            myCustomer.Name = Console.ReadLine();
-            myCustomer.Address = Console.ReadLine();
-            myCustomer.ContactNumber = Console.ReadLine();
-            Console.WriteLine("Deatail about customer: " + myCustomer.Name+" " +myCustomer.Address+" "+myCustomer.ContactNumber);
+            myCustomer.SetDetails("Miro", "Main street");
+
+            Console.WriteLine($"MyCustomer is: {myCustomer.Name} and lives at {myCustomer.Address} number {myCustomer.ContactNumber}");
+            //myCustomer.Name = Console.ReadLine();
+            //myCustomer.Address = Console.ReadLine();
+            //myCustomer.ContactNumber = Console.ReadLine();
+            //Console.WriteLine("Deatail about customer: " + earl.Name+" " +earl.Address+ " "+earl.ContactNumber);
             //Console.WriteLine("Customer name is : "+ earl.Name);
             //Console.WriteLine("Customer name is : " + miro.Name + " " +miro.Address+" "+miro.ContactNumber);
-            Console.ReadLine();
             */
+            
 
             /*
             //Creating an Object of the Clsss car
@@ -37,7 +51,7 @@
             Console.WriteLine("You entered " + audi.Brand);
             Console.WriteLine("You entered " + bmw.Brand);
             */
-
+            /*
             //Object can have properties(attributes of that object) and methods (capabilities)
             //Careating an instance of the Class car
             Car myAudi = new Car("A3", "Audi", "4.4L", "V8", true);
@@ -46,7 +60,12 @@
 
             Car myBmw = new Car("M3", "BMW", "3.2L", "V6", true);
             myBmw.Drive();
+            */
             Console.ReadKey();
+        }
+        static int AddNum(int num1, int num2)
+        {
+            return num1 + num2;
         }
     }
 }
