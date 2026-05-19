@@ -29,7 +29,7 @@ namespace MyQuizApp
             // loop through question array Question[]
             foreach (Question question in _questions)
             {
-                Console.WriteLine($"Question {questionNumber++}");
+                Console.WriteLine($"\nQuestion {questionNumber++}");
                 DispayQuestion(question);
                 //Get user choice using GetUserChoice() method
                 int userChoice = GetUserChoice(); // checking wether user put valid choice
