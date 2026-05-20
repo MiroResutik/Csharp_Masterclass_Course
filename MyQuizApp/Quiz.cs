@@ -29,8 +29,8 @@ namespace MyQuizApp
             // loop through question array Question[]
             foreach (Question question in _questions)
             {
-                Console.WriteLine($"\nQuestion {questionNumber++}");
-                DispayQuestion(question);
+                //Console.WriteLine($"\nQuestion {questionNumber++}");
+                DispayQuestion(question,questionNumber++);
                 //Get user choice using GetUserChoice() method
                 int userChoice = GetUserChoice(); // checking wether user put valid choice
                 //using boolean method IsCorrectAnswer
@@ -78,11 +78,11 @@ namespace MyQuizApp
             Console.ResetColor ();
         }
         // Method to display questions - private as we don't need to dispaly outside of the quiz 
-        private void DispayQuestion(Question question)
+        private void DispayQuestion(Question question, int questionNumber)
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("╔═════════════════════════════════════════════════════════════════════════╗");
-            Console.WriteLine("║                                 Question                                ║");
+            Console.WriteLine($"║                                 Question {questionNumber}                              ║");
             Console.WriteLine("╚═════════════════════════════════════════════════════════════════════════╝");
             Console.ResetColor();
             Console.WriteLine(question.QuestionText);
@@ -99,15 +99,7 @@ namespace MyQuizApp
                 // Dispaly answers in any given question
                 Console.WriteLine($". {question.Answers[i]}");
             }
-            //if (GetUserChoice() == question.CorrestAnswerIndex)
-            //{
-            //    Console.WriteLine("Correct!");
 
-            //}
-            //else
-            //{
-            //    Console.WriteLine("Incorrect");
-            //}
         }
         
         //Method to get users imput choice
