@@ -10,6 +10,20 @@
     {
         static void Main(string[] args)
         {
+            //Nullables
+            /*
+            // Nullable data type - is able to by null. 
+            int? age = null;
+
+            if (age.HasValue)
+            {
+                Console.WriteLine("Age is: " + age.Value);
+            }
+            else 
+            {
+                Console.WriteLine("Age is not specified!");
+            }
+            */
             // Simple list creation and deletion
             /*
             //// Declaring list and initializing it
