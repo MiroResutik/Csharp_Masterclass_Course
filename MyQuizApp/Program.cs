@@ -43,8 +43,6 @@
                 new Question("Who wrote 'Harry Potter'?", new string[] {"J.R.R. Tolkien", "J.K. Rowling", "George R.R. Martin", "Stephen King"}, 1),
                 new Question("What is the largest organ in the human body?", new string[] {"Heart", "Liver", "Skin", "Lungs"}, 2),
                 new Question("Which country is known as the Land of the Rising Sun?", new string[] {"China", "Thailand", "South Korea", "Japan"}, 3),
-                new Question("What is the hardest natural substance on Earth?", new string[] {"Gold", "Iron", "Diamond", "Quartz"}, 2),
-                new Question("Which country is known as the Land of the Rising Sun?", new string[] {"China", "Japan", "Thailand", "South Korea"}, 1),
                 new Question("What is the main language spoken in Spain?", new string[] {"Spanish", "Portuguese", "Italian", "French"}, 0),
                 new Question("Which planet is the largest in our solar system?", new string[] {"Earth", "Saturn", "Jupiter", "Neptune"}, 2),
                 new Question("How many bones are in the adult human body?", new string[] {"206", "201", "208", "212"}, 0),
@@ -53,10 +51,8 @@
                 new Question("Which instrument has keys, pedals, and strings?", new string[] {"Guitar", "Piano", "Drum", "Violin"}, 1),
                 new Question("What is the process by which plants make food?", new string[] {"Respiration", "Digestion", "Photosynthesis", "Transpiration"}, 2),
                 new Question("Which sport is known as the 'king of sports'?", new string[] {"Basketball", "Cricket", "Football (Soccer)", "Tennis"}, 2),
-                new Question("What is the largest ocean on Earth?", new string[] {"Atlantic Ocean", "Indian Ocean", "Pacific Ocean", "Arctic Ocean"}, 2),
                 new Question("Which metal is liquid at room temperature?", new string[] {"Iron", "Mercury", "Copper", "Aluminium"}, 1),
                 new Question("What is the capital of France?", new string[] {"Paris", "Rome", "Madrid", "Berlin"}, 0),
-                new Question("Which planet is closest to the Sun?", new string[] {"Earth", "Mercury", "Venus", "Mars"}, 1),
                 new Question("What is the square root of 64?", new string[] {"6", "7", "8", "9"}, 2),
                 new Question("Who is known as the Father of Computers?", new string[] {"Charles Babbage", "Alan Turing", "Bill Gates", "Steve Jobs"}, 0),
                 new Question("Which country hosted the 2012 Summer Olympics?", new string[] {"China", "UK", "Brazil", "USA"}, 1),
@@ -68,6 +64,18 @@
                 new Question("What is H2SO4 commonly known as?", new string[] {"Hydrochloric acid", "Sulfuric acid", "Nitric acid", "Carbonic acid"}, 1),
                 new Question("Which planet has the most moons?", new string[] {"Jupiter", "Saturn", "Mars", "Neptune"}, 1),
                 new Question("What is the capital of Egypt?", new string[] {"Cairo", "Alexandria", "Giza", "Luxor"}, 0),
+
+                // 10 New Questions
+                new Question("Which vitamin is produced when the human skin is exposed to sunlight?", new string[] {"Vitamin A", "Vitamin B12", "Vitamin C", "Vitamin D"}, 3),
+                new Question("What is the largest internal organ in the human body?", new string[] {"Heart", "Liver", "Kidney", "Lungs"}, 1),
+                new Question("Which planet is known for its rings?", new string[] {"Mars", "Saturn", "Jupiter", "Venus"}, 1),
+                new Question("What is the main ingredient in guacamole?", new string[] {"Tomato", "Avocado", "Onion", "Pepper"}, 1),
+                new Question("Which blood type is known as the universal donor?", new string[] {"A", "B", "AB", "O"}, 3),
+                new Question("Which element is the most abundant in the Earth's crust?", new string[] {"Oxygen", "Iron", "Silicon", "Aluminum"}, 0),
+                new Question("What is the freezing point of water in Celsius?", new string[] {"0", "32", "-1", "100"}, 0),
+                new Question("Which is the smallest bone in the human body?", new string[] {"Femur", "Stapes", "Tibia", "Humerus"}, 1),
+                new Question("What is the largest continent by population?", new string[] {"Africa", "Asia", "Europe", "North America"}, 1),
+                new Question("Which gas do humans exhale?", new string[] {"Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen"}, 1)
             };
 
             Quiz myQuiz = new Quiz(questions);
