@@ -49,7 +49,7 @@
                 Console.WriteLine($"The statecode is {item.Key} and the state name is {item.Value}");
             }
             */
-            /*
+            
             // Declaring and initilazing Dictionary and using object rather than string 
             Dictionary<int, Employee> employees = new Dictionary<int, Employee>();
 
@@ -70,7 +70,7 @@
             {
                 Console.WriteLine($"ID: {item.Key} Name: {item.Value.Name} {item.Value.Age} years old, earning £{item.Value.Salary} per year!");
             }
-            */
+            
 
             /*
             //Key - value
