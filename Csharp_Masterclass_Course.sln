@@ -37,6 +37,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TryCatchExceptions", "TryCa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InheritanceApp", "InheritanceApp\InheritanceApp.csproj", "{9574EEE1-383D-4D32-B908-1308B2D83543}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Advanced Method Overriding Exercise Section 8", "Advanced Method Overriding Exercise Section 8\Advanced Method Overriding Exercise Section 8.csproj", "{CC408D27-1497-4439-8868-B39D46721500}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +113,10 @@ Global
 		{9574EEE1-383D-4D32-B908-1308B2D83543}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9574EEE1-383D-4D32-B908-1308B2D83543}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9574EEE1-383D-4D32-B908-1308B2D83543}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC408D27-1497-4439-8868-B39D46721500}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC408D27-1497-4439-8868-B39D46721500}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC408D27-1497-4439-8868-B39D46721500}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC408D27-1497-4439-8868-B39D46721500}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
