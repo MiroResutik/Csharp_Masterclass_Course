@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListsApp", "ListsApp\ListsA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dictionaries", "Dictionaries\Dictionaries.csproj", "{DFBF1A9B-A28D-4260-8E42-256DA685660F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Advanced Dictionary Exercise Section 6", "Advanced Dictionary Exercise 16\Advanced Dictionary Exercise Section 6.csproj", "{EE1B5D23-AF87-4264-B68C-EA83472BB67E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{DFBF1A9B-A28D-4260-8E42-256DA685660F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DFBF1A9B-A28D-4260-8E42-256DA685660F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DFBF1A9B-A28D-4260-8E42-256DA685660F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE1B5D23-AF87-4264-B68C-EA83472BB67E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE1B5D23-AF87-4264-B68C-EA83472BB67E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE1B5D23-AF87-4264-B68C-EA83472BB67E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE1B5D23-AF87-4264-B68C-EA83472BB67E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

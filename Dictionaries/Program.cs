@@ -1,6 +1,6 @@
 ﻿namespace Dictionaries
 {
-    /*
+    
     class Employee
     {
         public string Name { get; set; }
@@ -14,11 +14,12 @@
             Salary = salary;
         }
     }
-    */
+    
     internal class Program
     {
         static void Main(string[] args)
         {
+            /*
             // Different way of Declaring and initilazing Dictionary using string as key and values as well
             var codes = new Dictionary<string, string>
             {
@@ -47,6 +48,7 @@
             {
                 Console.WriteLine($"The statecode is {item.Key} and the state name is {item.Value}");
             }
+            */
             /*
             // Declaring and initilazing Dictionary and using object rather than string 
             Dictionary<int, Employee> employees = new Dictionary<int, Employee>();
