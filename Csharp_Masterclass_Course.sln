@@ -33,6 +33,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dictionaries", "Dictionarie
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Advanced Dictionary Exercise Section 6", "Advanced Dictionary Exercise 16\Advanced Dictionary Exercise Section 6.csproj", "{EE1B5D23-AF87-4264-B68C-EA83472BB67E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TryCatchExceptions", "TryCatchExceptions\TryCatchExceptions.csproj", "{DC7CF11E-0DC4-42B9-8988-8D591E4CEC2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InheritanceApp", "InheritanceApp\InheritanceApp.csproj", "{9574EEE1-383D-4D32-B908-1308B2D83543}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +103,14 @@ Global
 		{EE1B5D23-AF87-4264-B68C-EA83472BB67E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE1B5D23-AF87-4264-B68C-EA83472BB67E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE1B5D23-AF87-4264-B68C-EA83472BB67E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC7CF11E-0DC4-42B9-8988-8D591E4CEC2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC7CF11E-0DC4-42B9-8988-8D591E4CEC2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC7CF11E-0DC4-42B9-8988-8D591E4CEC2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC7CF11E-0DC4-42B9-8988-8D591E4CEC2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9574EEE1-383D-4D32-B908-1308B2D83543}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9574EEE1-383D-4D32-B908-1308B2D83543}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9574EEE1-383D-4D32-B908-1308B2D83543}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9574EEE1-383D-4D32-B908-1308B2D83543}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
