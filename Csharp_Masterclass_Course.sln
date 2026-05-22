@@ -39,6 +39,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InheritanceApp", "Inheritan
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Advanced Method Overriding Exercise Section 8", "Advanced Method Overriding Exercise Section 8\Advanced Method Overriding Exercise Section 8.csproj", "{CC408D27-1497-4439-8868-B39D46721500}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyInjectionApp", "DependencyInjectionApp\DependencyInjectionApp.csproj", "{527AFB67-4490-4B8B-9CB3-19115409E016}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polymorphism with Interfaces Exercise Section 9", "Polymorphism with Interfaces Exercise Section 9\Polymorphism with Interfaces Exercise Section 9.csproj", "{BFC27963-1F0F-420D-94CC-F12EE2EE812B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -117,6 +121,14 @@ Global
 		{CC408D27-1497-4439-8868-B39D46721500}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC408D27-1497-4439-8868-B39D46721500}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC408D27-1497-4439-8868-B39D46721500}.Release|Any CPU.Build.0 = Release|Any CPU
+		{527AFB67-4490-4B8B-9CB3-19115409E016}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{527AFB67-4490-4B8B-9CB3-19115409E016}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{527AFB67-4490-4B8B-9CB3-19115409E016}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{527AFB67-4490-4B8B-9CB3-19115409E016}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFC27963-1F0F-420D-94CC-F12EE2EE812B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFC27963-1F0F-420D-94CC-F12EE2EE812B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFC27963-1F0F-420D-94CC-F12EE2EE812B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFC27963-1F0F-420D-94CC-F12EE2EE812B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

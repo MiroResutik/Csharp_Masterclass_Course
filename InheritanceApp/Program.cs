@@ -2,10 +2,234 @@
 
 namespace InheritanceApp
 {
+    //Interfaces and Polymorphism
+
+
+
+    //Decoupling
+    /*
+    //Decoupling: The Application class depend on the ILogger interface rather than
+    //specific implementation like FileLogger or DatabaseLogger.
+    //This mean you can easily switch the logging mechanism without changing the Application class
+
+    //Logger Application
+    public interface ILogger
+    {
+        void Log(string message);
+    }
+    //Implementation of FileLogger
+    public class FileLogger: ILogger
+    {
+        //Log method
+        public void Log(string message) 
+        {
+            string directoryPath = @"C:\Users\Miro\source\repos\Logs";
+            string filePath = System.IO.Path.Combine(directoryPath, "Log.txt");
+            //string logMessage = "Hello World!!!\nNew Log file created!!!" + "\n";
+
+            // If directory does not exist create new one
+            if (!Directory.Exists(directoryPath))
+            {
+                Directory.CreateDirectory(directoryPath);
+            }
+            //Log text in filePath
+            File.AppendAllText(filePath, message);
+
+        }
+
+    }
+    // Database logger
+    public class DatabaseLogger : ILogger
+    {
+        public void Log(string message)
+        {
+            //Implement the logic to log a message to a database
+            Console.WriteLine($"Logging to database... {message}");
+        }
+    }
+
+    public class Application
+    {
+        private readonly ILogger _logger;
+
+        public Application(ILogger logger)
+        {
+            _logger = logger;
+        }
+
+        public void DoWork()
+        {
+            _logger.Log("Log work started...");
+            //Do all the work
+            _logger.Log("Work Done!!!");
+        }
+    }
+    */
+    //Payment processor app
+    /*
+    public interface IPaymentProcessor
+    {
+        void ProcessPayment(decimal amount);
+    }
+
+    public class CreditCardProcessor : IPaymentProcessor
+    {
+        public void ProcessPayment(decimal amount)
+        {
+            //Implement credit card payment logic
+            Console.WriteLine($"Processing credit card payment of amount: £{amount}");
+        }
+    }
+    public class PaypalProcessor : IPaymentProcessor
+    {
+        public void ProcessPayment(decimal amount)
+        {
+            Console.WriteLine($"Processing Paypal payment of amount: £{amount}");
+        }
+    }
+    // Iterface class
+    public class PaymentService
+    {
+        private readonly IPaymentProcessor _processor;
+        // Constructor
+        public PaymentService(IPaymentProcessor processor)
+        {
+            _processor = processor;
+        }
+        //Method to process payment
+        public void ProcessPayment(decimal amount)
+        {
+            _processor.ProcessPayment(amount);
+        }
+    }
+    */
+    //Polymorphism
+    /*
+    public class Animal
+    {
+        public virtual void MakeSound()
+        {
+            Console.WriteLine("Some generic animal sound");
+        }
+    }
+
+    public class Dog : Animal
+    {
+        public override void MakeSound()
+        {
+            Console.WriteLine("Bark");
+        }
+    }
+
+    public class Cat : Animal
+    {
+        public override void MakeSound()
+        {
+            Console.WriteLine("Meow");
+        }
+    }
+    */
+    //Interfaces
+    /*
+    //Interface method
+    public interface IAnimal
+    {
+        //Non implemented method declaration
+        void MakeSound();
+        void Eat(string food);
+    }
+
+    public class Dog : IAnimal
+    {
+        //Implement Interfaces
+        public void Eat(string food)
+        {
+            Console.WriteLine("Dog ate: " +food);
+            //throw new NotImplementedException();
+        }
+
+        public void MakeSound()
+        {
+            Console.WriteLine("Bark...");
+            //throw new NotImplementedException();
+        }
+    }
+    public class Cat : IAnimal
+    {
+        //Implement Interfaces
+        public void Eat(string food)
+        {
+            Console.WriteLine("Cat ate: " + food);
+            //throw new NotImplementedException();
+        }
+
+        public void MakeSound()
+        {
+            Console.WriteLine("Meaw...");
+            //throw new NotImplementedException();
+        }
+    }
+    */
     internal class Program
     {
         static void Main(string[] args)
-        {
+        {   
+            //Decoupling
+            /*
+            //Logger Constructor
+            ILogger fileLogger = new FileLogger();
+            Application application = new Application(fileLogger);
+            application.DoWork();
+
+            ILogger databaseLogger = new DatabaseLogger();
+            Application database = new Application(databaseLogger);
+            database.DoWork();
+            */
+            //Storing Log file in local directory
+            /*
+            //The @ sign in C# is used to denote a verbatim string literal
+            string directoryPath = @"C:\Users\Miro\source\repos\Logs";
+            string filePath = System.IO.Path.Combine(directoryPath, "Log.txt");
+            string logMessage = "Hello World!!!\nNew Log file created!!!" + "\n";
+
+            // If directory does not exist create new one
+            if (!Directory.Exists(directoryPath))
+            {
+                Directory.CreateDirectory(directoryPath);
+            }
+            //Log text in filePath
+            File.AppendAllText(filePath, logMessage);
+            */
+            //Interface reusability
+            /*
+            //Polymorphism
+            IPaymentProcessor creditCardProcessor = new CreditCardProcessor();
+            //Pass creditCardProcessor as constructor
+            PaymentService paymentServiceCreditCard = new PaymentService(creditCardProcessor);
+            paymentServiceCreditCard.ProcessPayment(100.00m);
+            //Paypal processor
+            IPaymentProcessor paypalProcessor= new PaypalProcessor();
+            PaymentService paymentServicePaypal = new PaymentService(paypalProcessor);
+            paymentServicePaypal.ProcessPayment(200.00m);
+            */
+            // Polymorphism - simple example
+            /*
+            // Part 2 of Polymorphism
+            //Create Animal object but store a Dog object in it
+            Animal myAnimal = new Dog();
+            myAnimal.MakeSound();
+            */
+            //Interfaces
+            /*
+            Dog dog = new Dog();
+            dog.MakeSound();
+            dog.Eat("Treat");
+
+            Cat cat = new Cat();
+            cat.MakeSound();
+            cat.Eat("Mouse");
+            */
+            //Inheritance
             /*
             //Employee joe = new Employee("Joe", 40, "Sales Rep", 111);
             //joe.DispalyEmployeeInfo();
@@ -39,7 +263,6 @@ namespace InheritanceApp
             derivedClass.AccessFields();
             derivedClass.ShowFields();
             */
-
             //Parent class and Child class
             /*
             Dog myDog = new Dog();
@@ -53,7 +276,7 @@ namespace InheritanceApp
         }
     }
 
-    // Constructors
+    // Inheritance Constructors
     /*
     public class Person
     {
@@ -129,7 +352,6 @@ namespace InheritanceApp
         }
     }
     */
-
 
         //Access modifiers and Protected keywords
         /*
