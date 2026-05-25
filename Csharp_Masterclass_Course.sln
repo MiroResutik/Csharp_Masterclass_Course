@@ -43,6 +43,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyInjectionApp", "D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polymorphism with Interfaces Exercise Section 9", "Polymorphism with Interfaces Exercise Section 9\Polymorphism with Interfaces Exercise Section 9.csproj", "{BFC27963-1F0F-420D-94CC-F12EE2EE812B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StructsApp", "StructsApp\StructsApp.csproj", "{530831FF-262C-44CC-B9B1-9D2E3B782E7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StructsApp1", "StructsApp1\StructsApp1.csproj", "{24089B1E-6A2D-466F-9224-1D271B168350}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnumsC", "EnumsC\EnumsC.csproj", "{188F1525-A819-418E-A00F-5BF9009D1595}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateTimeT", "DateTimeT\DateTimeT.csproj", "{6E82C21E-2456-4129-9A83-92BB111134AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Structs Exercise Section 10", "Structs Exercise Section 10\Structs Exercise Section 10.csproj", "{2E464D6E-B6E2-41FC-8385-909A0CF5AB97}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -129,6 +139,26 @@ Global
 		{BFC27963-1F0F-420D-94CC-F12EE2EE812B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFC27963-1F0F-420D-94CC-F12EE2EE812B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFC27963-1F0F-420D-94CC-F12EE2EE812B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{530831FF-262C-44CC-B9B1-9D2E3B782E7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{530831FF-262C-44CC-B9B1-9D2E3B782E7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{530831FF-262C-44CC-B9B1-9D2E3B782E7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{530831FF-262C-44CC-B9B1-9D2E3B782E7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24089B1E-6A2D-466F-9224-1D271B168350}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24089B1E-6A2D-466F-9224-1D271B168350}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24089B1E-6A2D-466F-9224-1D271B168350}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24089B1E-6A2D-466F-9224-1D271B168350}.Release|Any CPU.Build.0 = Release|Any CPU
+		{188F1525-A819-418E-A00F-5BF9009D1595}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{188F1525-A819-418E-A00F-5BF9009D1595}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{188F1525-A819-418E-A00F-5BF9009D1595}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{188F1525-A819-418E-A00F-5BF9009D1595}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E82C21E-2456-4129-9A83-92BB111134AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E82C21E-2456-4129-9A83-92BB111134AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E82C21E-2456-4129-9A83-92BB111134AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E82C21E-2456-4129-9A83-92BB111134AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E464D6E-B6E2-41FC-8385-909A0CF5AB97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E464D6E-B6E2-41FC-8385-909A0CF5AB97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E464D6E-B6E2-41FC-8385-909A0CF5AB97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E464D6E-B6E2-41FC-8385-909A0CF5AB97}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
