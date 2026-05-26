@@ -13,7 +13,7 @@ namespace RegexE
 
 
             // Test string
-            string text = "Hi there 123";
+            string text = "12.5 Hi there 489, my number is 12314 and 9874";
 
             // Find hits
             MatchCollection hits = regex.Matches(text);
