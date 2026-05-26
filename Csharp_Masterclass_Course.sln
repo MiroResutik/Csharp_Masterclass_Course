@@ -61,6 +61,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stock Price Alert System Wi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stock_Price_Alert_System_Exercise_Section_11", "Stock_Price_Alert_System_Exercise_Section_11\Stock_Price_Alert_System_Exercise_Section_11.csproj", "{6B25025C-D4F7-4F4B-8755-91188EF35649}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegexE", "RegexE\RegexE.csproj", "{9DE8CC57-DDE2-4A62-B4C7-CC2C71A3F599}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -183,6 +185,10 @@ Global
 		{6B25025C-D4F7-4F4B-8755-91188EF35649}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B25025C-D4F7-4F4B-8755-91188EF35649}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B25025C-D4F7-4F4B-8755-91188EF35649}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DE8CC57-DDE2-4A62-B4C7-CC2C71A3F599}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DE8CC57-DDE2-4A62-B4C7-CC2C71A3F599}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DE8CC57-DDE2-4A62-B4C7-CC2C71A3F599}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DE8CC57-DDE2-4A62-B4C7-CC2C71A3F599}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
