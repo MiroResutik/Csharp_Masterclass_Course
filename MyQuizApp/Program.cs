@@ -76,6 +76,17 @@
                 new Question("Which is the smallest bone in the human body?", new string[] {"Femur", "Stapes", "Tibia", "Humerus"}, 1),
                 new Question("What is the largest continent by population?", new string[] {"Africa", "Asia", "Europe", "North America"}, 1),
                 new Question("Which gas do humans exhale?", new string[] {"Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen"}, 1)
+                // 10 Additional Questions
+                new Question("Which country is home to the Great Wall?", new string[] {"India", "China", "Japan", "Russia"}, 1),
+                new Question("What is the primary language spoken in Canada?", new string[] {"English and French", "Spanish", "German", "Italian"}, 0),
+                new Question("Which scientist developed the theory of relativity?", new string[] {"Isaac Newton", "Nikola Tesla", "Albert Einstein", "Galileo Galilei"}, 2),
+                new Question("What is the largest ocean in the world?", new string[] {"Atlantic Ocean", "Indian Ocean", "Pacific Ocean", "Southern Ocean"}, 2),
+                new Question("Which animal can fly naturally?", new string[] {"Penguin", "Ostrich", "Eagle", "Elephant"}, 2),
+                new Question("What is the chemical symbol for sodium?", new string[] {"Na", "S", "So", "Sn"}, 0),
+                new Question("Which country gifted the Statue of Liberty to the USA?", new string[] {"France", "Italy", "Germany", "Canada"}, 0),
+                new Question("How many planets are in the solar system?", new string[] {"7", "8", "9", "10"}, 1),
+                new Question("Which part of the plant conducts photosynthesis?", new string[] {"Root", "Stem", "Leaf", "Flower"}, 2),
+                new Question("Which famous ship sank in 1912 after hitting an iceberg?", new string[] {"Britannic", "Titanic", "Lusitania", "Queen Mary"}, 1),
             };
 
             Quiz myQuiz = new Quiz(questions);
