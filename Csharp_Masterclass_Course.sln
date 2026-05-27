@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113
+# Visual Studio Version 18
+VisualStudioVersion = 18.6.11819.183
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Csharp_Masterclass_Course", "Csharp_Masterclass_Course\Csharp_Masterclass_Course.csproj", "{869D5628-0E66-4676-A050-57800C400A72}"
 EndProject
@@ -64,6 +64,14 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegexE", "RegexE\RegexE.csproj", "{9DE8CC57-DDE2-4A62-B4C7-CC2C71A3F599}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extract Email with Regex Exercise Section 12", "Extract Email with Regex Exercise Section 12\Extract Email with Regex Exercise Section 12.csproj", "{F8600547-13F3-46CC-9476-CCCF7174C8EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFirstWPFApp", "MyFirstWPFApp\MyFirstWPFApp.csproj", "{6D4FA3D4-F9D5-4377-B2B0-C6AAAB85931B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoApp", "TodoApp\TodoApp.csproj", "{07B2E5BE-1A01-4985-8CA6-D2E72C1A061F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Login", "Login\Login.csproj", "{EE8B2FCE-F96E-4330-A029-9293D360A638}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBinding", "DataBinding\DataBinding.csproj", "{DCE13C04-D095-4DFC-9FB9-3C4424DADF3F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -195,6 +203,22 @@ Global
 		{F8600547-13F3-46CC-9476-CCCF7174C8EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8600547-13F3-46CC-9476-CCCF7174C8EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8600547-13F3-46CC-9476-CCCF7174C8EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D4FA3D4-F9D5-4377-B2B0-C6AAAB85931B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D4FA3D4-F9D5-4377-B2B0-C6AAAB85931B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D4FA3D4-F9D5-4377-B2B0-C6AAAB85931B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D4FA3D4-F9D5-4377-B2B0-C6AAAB85931B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07B2E5BE-1A01-4985-8CA6-D2E72C1A061F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07B2E5BE-1A01-4985-8CA6-D2E72C1A061F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07B2E5BE-1A01-4985-8CA6-D2E72C1A061F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07B2E5BE-1A01-4985-8CA6-D2E72C1A061F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE8B2FCE-F96E-4330-A029-9293D360A638}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE8B2FCE-F96E-4330-A029-9293D360A638}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE8B2FCE-F96E-4330-A029-9293D360A638}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE8B2FCE-F96E-4330-A029-9293D360A638}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCE13C04-D095-4DFC-9FB9-3C4424DADF3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCE13C04-D095-4DFC-9FB9-3C4424DADF3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCE13C04-D095-4DFC-9FB9-3C4424DADF3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCE13C04-D095-4DFC-9FB9-3C4424DADF3F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
