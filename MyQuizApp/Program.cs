@@ -75,7 +75,7 @@
                 new Question("What is the freezing point of water in Celsius?", new string[] {"0", "32", "-1", "100"}, 0),
                 new Question("Which is the smallest bone in the human body?", new string[] {"Femur", "Stapes", "Tibia", "Humerus"}, 1),
                 new Question("What is the largest continent by population?", new string[] {"Africa", "Asia", "Europe", "North America"}, 1),
-                new Question("Which gas do humans exhale?", new string[] {"Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen"}, 1)
+                new Question("Which gas do humans exhale?", new string[] {"Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen"}, 1),
                 // 10 Additional Questions
                 new Question("Which country is home to the Great Wall?", new string[] {"India", "China", "Japan", "Russia"}, 1),
                 new Question("What is the primary language spoken in Canada?", new string[] {"English and French", "Spanish", "German", "Italian"}, 0),
