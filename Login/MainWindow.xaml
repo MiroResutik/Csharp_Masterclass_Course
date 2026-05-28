@@ -23,7 +23,7 @@
                            Margin="0,0,0,25"
                            HorizontalAlignment="Center"/>
 
-                <TextBlock Text="Username"
+                <TextBlock Text="Username - Hint: admin"
                            FontWeight="SemiBold"
                            Margin="0,0,0,5"/>
 
@@ -31,9 +31,10 @@
                          Height="35"
                          FontSize="14"
                          Padding="10,5"
-                         Margin="0,0,0,15"/>
+                         Margin="0,0,0,15"
+                         TextChanged="InputChanged"/>
 
-                <TextBlock Text="Password"
+                <TextBlock Text="Password - Hint: 1234"
                            FontWeight="SemiBold"
                            Margin="0,0,0,5"/>
 
@@ -41,16 +42,20 @@
                              Height="35"
                              FontSize="14"
                              Padding="10,5"
-                             Margin="0,0,0,25"/>
+                             Margin="0,0,0,25"
+                             PasswordChanged="InputChanged"/>
 
-                <Button Content="Login"
-                        Height="40"
+                <Button x:Name="LoginButton" 
+                        
+                        Content="Login"
+                        Height="35"
                         FontSize="16"
                         FontWeight="Bold"
                         Background="#2563EB"
                         Foreground="White"
                         BorderThickness="0"
                         Cursor="Hand"
+                        IsEnabled="False"
                         Click="LoginButton_Click"/>
 
             </StackPanel>

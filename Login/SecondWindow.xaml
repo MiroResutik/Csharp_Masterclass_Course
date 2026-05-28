@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:Login"
         mc:Ignorable="d"
         Title="User Information"
-        Height="250"
+        Height="300"
         Width="400"
         WindowStartupLocation="CenterScreen">
 
@@ -19,8 +19,8 @@
 
             <StackPanel>
 
-                <TextBlock Text="Login Details"
-                           FontSize="24"
+                <TextBlock Text="Correct Login Details Entered"
+                           FontSize="22"
                            FontWeight="Bold"
                            Margin="0,0,0,20"
                            HorizontalAlignment="Center"/>
