@@ -73,6 +73,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Login", "Login\Login.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBinding", "DataBinding\DataBinding.csproj", "{DCE13C04-D095-4DFC-9FB9-3C4424DADF3F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyConverter_Static", "CurrencyConverter_Static\CurrencyConverter_Static.csproj", "{9722B4AF-8EF1-4789-9276-8D5AD97F29CF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -219,6 +221,10 @@ Global
 		{DCE13C04-D095-4DFC-9FB9-3C4424DADF3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DCE13C04-D095-4DFC-9FB9-3C4424DADF3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DCE13C04-D095-4DFC-9FB9-3C4424DADF3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9722B4AF-8EF1-4789-9276-8D5AD97F29CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9722B4AF-8EF1-4789-9276-8D5AD97F29CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9722B4AF-8EF1-4789-9276-8D5AD97F29CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9722B4AF-8EF1-4789-9276-8D5AD97F29CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
