@@ -33,5 +33,16 @@ namespace WPF_ZooManager.Properties {
                 return ((string)(this["MiroDBConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=Mirec-Desktop\\SQLEXPRESS;Initial Catalog=MiroDB;Integrated Security=T" +
+            "rue;Pooling=False;Encrypt=True;TrustServerCertificate=True")]
+        public string MiroDBConnectionStringHome {
+            get {
+                return ((string)(this["MiroDBConnectionStringHome"]));
+            }
+        }
     }
 }

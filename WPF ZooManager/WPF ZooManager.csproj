@@ -70,10 +70,20 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MiroDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MiroDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="MiroDBZooDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MiroDBZooDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MiroDBZooDataSetHome.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MiroDBZooDataSetHome.xsd</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -92,6 +102,17 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="MiroDBDataSet.xsc">
+      <DependentUpon>MiroDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MiroDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MiroDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MiroDBDataSet.xss">
+      <DependentUpon>MiroDBDataSet.xsd</DependentUpon>
+    </None>
     <None Include="MiroDBZooDataSet.xsc">
       <DependentUpon>MiroDBZooDataSet.xsd</DependentUpon>
     </None>
@@ -102,6 +123,17 @@
     </None>
     <None Include="MiroDBZooDataSet.xss">
       <DependentUpon>MiroDBZooDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MiroDBZooDataSetHome.xsc">
+      <DependentUpon>MiroDBZooDataSetHome.xsd</DependentUpon>
+    </None>
+    <None Include="MiroDBZooDataSetHome.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MiroDBZooDataSetHome.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MiroDBZooDataSetHome.xss">
+      <DependentUpon>MiroDBZooDataSetHome.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

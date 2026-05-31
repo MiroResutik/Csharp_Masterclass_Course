@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace WPF_ZooManager
 {
@@ -35,14 +36,37 @@ namespace WPF_ZooManager
             sqlConnection = new SqlConnection(connectionString);
 
 
-
+            ShowZoos();
 
         }
 
         private void ShowZoos()
         {
-            string query = "SELECT * FROM Zoos";
-            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(query, sqlConnection);
+            try
+            {
+                string query = "SELECT * FROM Zoo";
+
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(query, sqlConnection);
+
+                using (sqlDataAdapter)
+                {
+                    DataTable zooTable = new DataTable();
+
+                    sqlDataAdapter.Fill(zooTable);
+                    // Which info of the table in DataTAble should be shown in our listbox
+                    listZoos.DisplayMemberPath = "location";
+                    // Which Value should be delivered, when an item from our listbox is selected
+                    listZoos.SelectedValuePath = "Id";
+                    // Refernce to the data the listbox shoild polulate
+                    listZoos.ItemsSource = zooTable.DefaultView;
+                }
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show(e.ToString());
+            }
+
         }
     }
 }
