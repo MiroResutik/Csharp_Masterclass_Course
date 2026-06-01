@@ -69,7 +69,7 @@
              Height="299"
              Margin="396,41,0,0"
              VerticalAlignment="Top"
-             Width="158"/>
+             Width="158" SelectionChanged="listAllAnimals_SelectionChanged"/>
         <Button x:Name="btnUpdateAnimal"
             Content="Update Animal"    
             Width="158"

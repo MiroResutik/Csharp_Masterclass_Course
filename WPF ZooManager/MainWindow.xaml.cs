@@ -138,7 +138,10 @@ namespace WPF_ZooManager
         {
             //MessageBox.Show(listZoos.SelectedValue.ToString());
             ShowAssociatedAnimals();
-            ShowAllAnimals();
+            //ShowAllAnimals();
+            ShowSelectedZooInTextBox();
+            Remove
+            
 
         }
 
@@ -202,20 +205,147 @@ namespace WPF_ZooManager
             }
         }
 
+        private void ShowSelectedZooInTextBox()
+        {
+            try
+            {
+                string query = "select location from Zoo where Id = @ZooId";
+
+                SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+                // the SqlDataAdapter can be imagined like an Interface to make Tables usable by C#-Objects
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+
+                using (sqlDataAdapter)
+                {
+                    // We have to add the parameter @ZooId, because we used it in our query
+                    sqlCommand.Parameters.AddWithValue("@ZooId", listZoos.SelectedValue);
+
+                    DataTable zooDataTable = new DataTable();
+
+                    sqlDataAdapter.Fill(zooDataTable);
+
+                    myTextBox.Text = zooDataTable.Rows[0]["Location"].ToString();
+                }
+            }
+            catch (Exception e)
+            {
+                //MessageBox.Show(e.ToString());
+            }
+        }
+
+        private void ShowSelectedAnimalInTextBox()
+        {
+            try
+            {
+                string query = "select name from Animal where Id = @AnimalId";
+
+                SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+                // the SqlDataAdapter can be imagined like an Interface to make Tables usable by C#-Objects
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+
+                using (sqlDataAdapter)
+                {
+                    // We have to add the parameter @ZooId, because we used it in our query
+                    sqlCommand.Parameters.AddWithValue("@AnimalId", listAllAnimals.SelectedValue);
+
+                    DataTable animalDataTable = new DataTable();
+
+                    sqlDataAdapter.Fill(animalDataTable);
+
+                    myTextBox.Text = animalDataTable.Rows[0]["Name"].ToString();
+                }
+            }
+            catch (Exception e)
+            {
+                //MessageBox.Show(e.ToString());
+            }
+        }
+
         private void btnUpdateZoo_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                string query = "update Zoo Set Location =  @location where Id = @ZooId";
+                SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+                // Open the connection to the database, because we want to execute a command
+                sqlConnection.Open();
+                // We have to add the parameter @Location, because we used it in our query
+                sqlCommand.Parameters.AddWithValue("@ZooId", listZoos.SelectedValue);
+                sqlCommand.Parameters.AddWithValue("@Location", myTextBox.Text);
+                // ExecuteScalar is used, when we want to get a single value from the database, for example the Id of a newly created record
+                sqlCommand.ExecuteScalar();
+                // After deleting the Zoo, we have to update our ListBox to show the changes
 
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                // After deleting the Zoo, we have to update our ListBox to show the changes
+                sqlConnection.Close();
+                ShowZoos();
+            }
         }
 
         private void btnRemoveAnimal_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                string query = "select location from Zoo where Id = @ZooId";
 
+                SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+                // the SqlDataAdapter can be imagined like an Interface to make Tables usable by C#-Objects
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+
+                using (sqlDataAdapter)
+                {
+
+                    sqlCommand.Parameters.AddWithValue("@ZooId", listZoos.SelectedValue);
+
+                    DataTable zooDataTable = new DataTable();
+
+                    sqlDataAdapter.Fill(zooDataTable);
+
+                    myTextBox.Text = zooDataTable.Rows[0]["Location"].ToString();
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show(e.ToString());
+            }
         }
-
-
+       
         private void btnUpdateAnimal_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                string query = "update Animal Set Name =  @name where Id = @AnimalId";
+                SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+                // Open the connection to the database, because we want to execute a command
+                sqlConnection.Open();
+                // We have to add the parameter @Location, because we used it in our query
+                sqlCommand.Parameters.AddWithValue("@AnimalId", listAllAnimals.SelectedValue);
+                sqlCommand.Parameters.AddWithValue("@Name", myTextBox.Text);
+                // ExecuteScalar is used, when we want to get a single value from the database, for example the Id of a newly created record
+                sqlCommand.ExecuteScalar();     
 
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                // After deleting the Zoo, we have to update our ListBox to show the changes
+                sqlConnection.Close();
+                ShowZoos();
+            }
         }
 
         private void btnDeleteAnimal_Click(object sender, RoutedEventArgs e)
@@ -307,6 +437,11 @@ namespace WPF_ZooManager
                 sqlConnection.Close();
                 ShowAssociatedAnimals();
             }
+        }
+
+        private void listAllAnimals_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ShowSelectedAnimalInTextBox();
         }
     }
 }
