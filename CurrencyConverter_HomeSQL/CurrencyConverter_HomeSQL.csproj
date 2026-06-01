@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Images\**" />
+    <EmbeddedResource Remove="Images\**" />
+    <None Remove="Images\**" />
+    <Page Remove="Images\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Images\delete-button.png" />
+    <Content Include="Images\edit-button.png" />
+    <Content Include="Images\Logo.png" />
+    <Content Include="Images\money.png" />
+    <Content Include="Images\right_arrow.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="/Images/" />
+  </ItemGroup>
+
+</Project>
