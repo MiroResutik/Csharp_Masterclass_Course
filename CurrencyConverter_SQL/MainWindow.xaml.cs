@@ -373,10 +373,46 @@ namespace CurrencyConverter_SQL
                 MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
-
+        
+        //From currency combobox selection changed event for get amount of currency on selection change of currency name
         private void cmbFromCurrency_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            try
+            {
+                //Check condition cmbFromCurrency.SelectedValue not is equal to null and not equal to zero
+                if (cmbFromCurrency.SelectedValue != null && int.Parse(cmbFromCurrency.SelectedValue.ToString()) != 0 && cmbFromCurrency.SelectedIndex != 0)
+                {
+                    //cmbFromCurrency.SelectedValue set in CurrencyFromId variable
+                    int CurrencyFromId = int.Parse(cmbFromCurrency.SelectedValue.ToString());
 
+                    mycon();
+                    DataTable dt = new DataTable();
+
+                    //Select query for get Amount from database using id
+                    cmd = new SqlCommand("SELECT Amount FROM Currency_Master WHERE Id = @CurrencyFromId", con);
+                    cmd.CommandType = CommandType.Text;
+
+                    //CurrencyFromId set in @CurrencyFromId parameter and send parameter in our query
+                    if (CurrencyFromId != null && CurrencyFromId != 0)
+                    {
+                        cmd.Parameters.AddWithValue("@CurrencyFromId", CurrencyFromId);
+                    }
+                    da = new SqlDataAdapter(cmd);
+
+                    //Set the data that the query returns in the data table
+                    da.Fill(dt);
+                    if (dt != null && dt.Rows.Count > 0)
+                    {
+                        //Get amount column value from datatable and set amount value in FromAmount variable which is declared globally
+                        FromAmount = double.Parse(dt.Rows[0]["Amount"].ToString());
+                    }
+                    con.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void cmbFromCurrency_PreviewKeyDown(object sender, KeyEventArgs e)
