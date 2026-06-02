@@ -420,9 +420,45 @@ namespace CurrencyConverter_SQL
 
         }
 
+        //To currency combobox selection changed event for get amount of currency on selection change of currency name
         private void cmbToCurrency_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            try
+            {
+                //Check condition cmbToCurrency SelectedValue not is equal to null and not equal to zero
+                if (cmbToCurrency.SelectedValue != null && int.Parse(cmbToCurrency.SelectedValue.ToString()) != 0 && cmbToCurrency.SelectedIndex != 0)
+                {
+                    //cmbToCurrency SelectedValue set in CurrencyToId variable
+                    int CurrencyToId = int.Parse(cmbToCurrency.SelectedValue.ToString());
 
+                    mycon();
+                    DataTable dt = new DataTable();
+
+                    //Select query for get Amount from database using id
+                    cmd = new SqlCommand("SELECT Amount FROM Currency_Master WHERE Id = @CurrencyToId", con);
+                    cmd.CommandType = CommandType.Text;
+
+                    //CurrencyToId set in @CurrencyToId parameter and send parameter in our query
+                    if (CurrencyToId != null && CurrencyToId != 0)
+                    {
+                        cmd.Parameters.AddWithValue("@CurrencyToId", CurrencyToId);
+                    }
+
+                    da = new SqlDataAdapter(cmd);
+                    //Set the data that the query returns in the data table
+                    da.Fill(dt);
+                    if (dt != null && dt.Rows.Count > 0)
+                    {
+                        //Get amount column value from datatable and set amount value in ToAmount variable which is declared globally            
+                        ToAmount = double.Parse(dt.Rows[0]["Amount"].ToString());
+                    }
+                    con.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void cmbToCurrency_PreviewKeyDown(object sender, KeyEventArgs e)
