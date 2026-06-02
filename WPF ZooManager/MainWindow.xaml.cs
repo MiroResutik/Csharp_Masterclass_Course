@@ -140,7 +140,7 @@ namespace WPF_ZooManager
             ShowAssociatedAnimals();
             //ShowAllAnimals();
             ShowSelectedZooInTextBox();
-            Remove
+            
             
 
         }
