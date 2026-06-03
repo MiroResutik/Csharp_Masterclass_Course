@@ -81,6 +81,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyConverter_HomeSQL",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyConverter_SQL", "CurrencyConverter_SQL\CurrencyConverter_SQL.csproj", "{7B3617F2-126D-4E34-9B2F-CF43E22EFF9C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linq1", "Linq1\Linq1.csproj", "{95F4A09F-A94D-419A-9C54-C2B914C508FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqToObjectsAndQueryOperators", "LinqToObjectsAndQueryOperators\LinqToObjectsAndQueryOperators.csproj", "{40BB6F2B-5041-4D58-AF20-D3CD6D093F0D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -243,6 +247,14 @@ Global
 		{7B3617F2-126D-4E34-9B2F-CF43E22EFF9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B3617F2-126D-4E34-9B2F-CF43E22EFF9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B3617F2-126D-4E34-9B2F-CF43E22EFF9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95F4A09F-A94D-419A-9C54-C2B914C508FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95F4A09F-A94D-419A-9C54-C2B914C508FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95F4A09F-A94D-419A-9C54-C2B914C508FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95F4A09F-A94D-419A-9C54-C2B914C508FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40BB6F2B-5041-4D58-AF20-D3CD6D093F0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40BB6F2B-5041-4D58-AF20-D3CD6D093F0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40BB6F2B-5041-4D58-AF20-D3CD6D093F0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40BB6F2B-5041-4D58-AF20-D3CD6D093F0D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
