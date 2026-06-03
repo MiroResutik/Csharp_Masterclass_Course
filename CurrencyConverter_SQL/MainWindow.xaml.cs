@@ -1,21 +1,12 @@
 ﻿using System;
 using System.Configuration;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+
 
 namespace CurrencyConverter_SQL
 {
@@ -24,22 +15,22 @@ namespace CurrencyConverter_SQL
     /// </summary>
     public partial class MainWindow : Window
     {
+        // Declaring global variables for database connection and operations, as well as variables to hold currency conversion data.
         SqlConnection con = new SqlConnection(); // Creating Object of SqlConnection class to establish a connection to the database.
         SqlCommand cmd = new SqlCommand(); // Creating Object of SqlCommand class to execute SQL commands against the database.
         SqlDataAdapter da = new SqlDataAdapter(); // Creating Object of SqlDataAdapter class to fill a DataSet and update the database.
 
+        // Variables to hold the ID of the currency and the amounts for conversion, which are likely used for database operations and currency conversion calculations.
         private int CurrencyId = 0; // Variable to hold the ID of the currency, likely used for database operations.
         private double FromAmount = 0; // Variable to hold the amount of currency to convert from.
         private double ToAmount = 0; // Variable to hold the amount of currency after conversion.
 
-
-
         //CRUD Operations for Currency
-
+        // The MainWindow constructor is responsible for initializing the components of the main window, binding the currency data to the ComboBoxes, and retrieving existing currency records to display in the DataGrid when the application starts.
         public MainWindow()
         {
             InitializeComponent();
-            BindCurrency();
+            BindCurrency(); 
             BindCurrency(); // Calling the BindCurrency method to populate the ComboBoxes with currency data when the main window is initialized.
             GetData(); // Calling the GetData method to retrieve and display the existing currency records in the DataGrid when the main window is initialized.
 
@@ -54,7 +45,7 @@ namespace CurrencyConverter_SQL
             con.Open();
 
         }
-
+        // The BindCurrency method is responsible for retrieving currency data from the database and binding it to the ComboBoxes in the user interface, allowing users to select currencies for conversion.
         private void BindCurrency()
         {
             // This method is responsible for binding currency data to the ComboBoxes in the user interface.
@@ -136,9 +127,10 @@ namespace CurrencyConverter_SQL
 
 
         }
+        // The Convert_Click method is responsible for handling the click event of the Convert button. It validates the user input, performs the currency conversion calculation based on the selected source and target currencies, and displays the converted value in the user interface.
         private void Convert_Click(object sender, RoutedEventArgs e)
         {
-            lblCurrency.Content = "Amount Converted!!!";
+            lblCurrency.Content = "Please Enter Currency Amount!!!";
 
             double ConvertedValue;
             // Validating the input for currency amount. If it's empty, show a message box and set focus back to the input field.
@@ -192,6 +184,7 @@ namespace CurrencyConverter_SQL
 
             }
         }
+        // The ClearControls method is responsible for clearing the input fields and resetting the ComboBoxes to their default state, allowing the user to start a new currency conversion without any previous data.
         private void ClearControls()
         {
             // This method is intended to clear the input fields and reset the ComboBoxes to their default state.
@@ -200,18 +193,19 @@ namespace CurrencyConverter_SQL
             cmbToCurrency.SelectedIndex = 0; // Reset the target currency ComboBox to the default selection.
             lblCurrency.Content = string.Empty; // Clear the label that displays the converted currency result.
         }
-
+        // The Clear_Click method is an event handler for the Clear button's click event. It calls the ClearControls method to reset the form and clear any user input, allowing the user to start fresh with a new currency conversion.
         private void Clear_Click(object sender, RoutedEventArgs e)
         {
             ClearControls();
         }
+        // The NumberValidationTextBox method is an event handler for the TextComposition event of the currency amount input field. It uses a regular expression to allow only numeric input (including decimal points and commas) and prevents any non-numeric characters from being entered into the input field.
         private void NumberValidationTextBox(object sender, System.Windows.Input.TextCompositionEventArgs e)
         {
             Regex regex = new Regex("[^0-9.,]+"); // Regular expression to allow only numeric input.
             e.Handled = regex.IsMatch(e.Text); // If the input does not match the regex (i.e., it's not a number), mark the event as handled to prevent the input.
 
         }
-
+        // The btnSave_Click method is responsible for handling the click event of the Save button. It validates the user input for currency amount and name, determines whether to perform an insert or update operation based on the CurrencyId, and interacts with the database to save or update the currency record accordingly.
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -280,7 +274,7 @@ namespace CurrencyConverter_SQL
                 MessageBox.Show(ex.Message, "Error saving file", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
-
+        // The btnCancel_Click method is responsible for handling the click event of the Cancel button. It calls the ClearMaster method to reset the form and clear any user input, allowing the user to start fresh without saving any changes.
         private void btnCancel_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -294,17 +288,15 @@ namespace CurrencyConverter_SQL
 
             }
         }
-
+        // The txtAmount_TextChanged and txtCurrencyName_TextChanged methods are event handlers for the TextChanged event of the Amount and CurrencyName input fields, respectively. Currently, they do not contain any logic, but they can be used to implement real-time validation or other functionality as needed when the text in these fields changes.
         private void txtAmount_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }
-
         private void txtCurrencyName_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }
-
         //DataGrid selected cell changed event
         private void dgvCurrency_SelectedCellsChanged(object sender, SelectedCellsChangedEventArgs e)
         {
@@ -373,7 +365,6 @@ namespace CurrencyConverter_SQL
                 MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
-        
         //From currency combobox selection changed event for get amount of currency on selection change of currency name
         private void cmbFromCurrency_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -414,12 +405,24 @@ namespace CurrencyConverter_SQL
                 MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
-
+        //cmbFromCurrency preview key down event
         private void cmbFromCurrency_PreviewKeyDown(object sender, KeyEventArgs e)
         {
-
+            //If the user press Tab or Enter key then cmbFromCurrency_SelectionChanged event fire
+            if (e.Key == Key.Tab || e.SystemKey == Key.Enter)
+            {
+                cmbFromCurrency_SelectionChanged(sender, null);
+            }
         }
-
+        //cmbToCurrency preview key down event
+        private void cmbToCurrency_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            //If the user press Tab or Enter key then cmbToCurrency_SelectionChanged event fire
+            if (e.Key == Key.Tab || e.SystemKey == Key.Enter)
+            {
+                cmbToCurrency_SelectionChanged(sender, null);
+            }
+        }
         //To currency combobox selection changed event for get amount of currency on selection change of currency name
         private void cmbToCurrency_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -459,11 +462,6 @@ namespace CurrencyConverter_SQL
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-        }
-
-        private void cmbToCurrency_PreviewKeyDown(object sender, KeyEventArgs e)
-        {
-
         }
         //Bind Data in DataGrid View.
         public void GetData()
