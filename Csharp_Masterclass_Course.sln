@@ -85,6 +85,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linq1", "Linq1\Linq1.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqToObjectsAndQueryOperators", "LinqToObjectsAndQueryOperators\LinqToObjectsAndQueryOperators.csproj", "{40BB6F2B-5041-4D58-AF20-D3CD6D093F0D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqWithXML", "LinqWithXML\LinqWithXML.csproj", "{BCCE74ED-F721-44FC-B43A-090207301C81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqToSQL", "LinqToSQL\LinqToSQL.csproj", "{6372C7AA-30C3-4F32-B351-D1101936D8BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -255,6 +259,14 @@ Global
 		{40BB6F2B-5041-4D58-AF20-D3CD6D093F0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40BB6F2B-5041-4D58-AF20-D3CD6D093F0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40BB6F2B-5041-4D58-AF20-D3CD6D093F0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCCE74ED-F721-44FC-B43A-090207301C81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCCE74ED-F721-44FC-B43A-090207301C81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCCE74ED-F721-44FC-B43A-090207301C81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCCE74ED-F721-44FC-B43A-090207301C81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6372C7AA-30C3-4F32-B351-D1101936D8BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6372C7AA-30C3-4F32-B351-D1101936D8BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6372C7AA-30C3-4F32-B351-D1101936D8BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6372C7AA-30C3-4F32-B351-D1101936D8BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
