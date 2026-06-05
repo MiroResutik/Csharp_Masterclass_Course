@@ -3,17 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+
 
 namespace LinqToSQL
 {
@@ -30,10 +22,12 @@ namespace LinqToSQL
             InitializeComponent();
             try
             {
+                // Initialize the data context with the connection string from the configuration file
                 string connectionString = ConfigurationManager.ConnectionStrings["LinqToSQL.Properties.Settings.MiroDBConnectionString"].ConnectionString;
+                // Create a new instance of the data context using the connection string
                 dataContext = new LinqToSqlDataClassesDataContext(connectionString);
-                //InsertUniversity();
-                //InsertStudent();
+                InsertUniversity();
+                InsertStudent();
                 //InsertLectures();
                 //InsertStudentLectureAssociations();
                 //GetUniversityOfToni();
@@ -42,7 +36,8 @@ namespace LinqToSQL
                 //GetAllStudentsFromYale();
                 //GetAllLecturesFromBeijingTech();
                 //GetAllUniversitiesWithMale();
-                UpdateToni();
+                //UpdateToni();
+                //DeleteJame();
             }
             catch (Exception ex)
             {
@@ -59,7 +54,7 @@ namespace LinqToSQL
         public void InsertUniversity()
         {
 
-            dataContext.ExecuteCommand("DELETE FROM University");
+            //dataContext.ExecuteCommand("DELETE FROM University");
 
             // Create a new University object
             University yale = new University();
@@ -70,13 +65,25 @@ namespace LinqToSQL
             beijingTech.Name = "Beijing Tech";
             dataContext.Universities.InsertOnSubmit(beijingTech);
 
+            University mit = new University();
+            beijingTech.Name = "Massachusetts Institute of Technology";
+            dataContext.Universities.InsertOnSubmit(mit);
+
+            University princeton = new University();
+            beijingTech.Name = "Princeton University";
+            dataContext.Universities.InsertOnSubmit(princeton);
+
+            University stanford = new University();
+            beijingTech.Name = "Stanford University";
+            dataContext.Universities.InsertOnSubmit(stanford);
+
 
             // Insert the new university into the data context
             dataContext.Universities.InsertOnSubmit(yale);
             dataContext.Universities.InsertOnSubmit(beijingTech);
-            //dataContext.Universities.InsertOnSubmit(mit);
-            //dataContext.Universities.InsertOnSubmit(princeton);
-            //dataContext.Universities.InsertOnSubmit(stanford);
+            dataContext.Universities.InsertOnSubmit(mit);
+            dataContext.Universities.InsertOnSubmit(princeton);
+            dataContext.Universities.InsertOnSubmit(stanford);
             // Submit the changes to the database
             dataContext.SubmitChanges();
 
@@ -166,6 +173,28 @@ namespace LinqToSQL
             MainDataGrid.ItemsSource = transgernderUniversities;
         }
         // Method to update the name of a student named Toni to Antonio and refresh the data grid to show the updated name
+        // This method demonstrates how to update an existing record in the database using LINQ to SQL. It retrieves the student named Toni, updates his name to Antonio, and then submits the changes to the database. Finally, it refreshes the data grid to display the updated list of students.
+        public void UpdateToni()
+        {
+            Student Toni = dataContext.Students.FirstOrDefault(st => st.Name == "Toni");
 
+            Toni.Name = "Antonio";
+
+            dataContext.SubmitChanges();
+
+            MainDataGrid.ItemsSource = dataContext.Students;
+        }
+        // Method to delete a student named Jame from the database and refresh the data grid to show the updated list of students
+        public void DeleteJame()
+        {
+            Student Jame = dataContext.Students.FirstOrDefault(st => st.Name == "Jame");
+            dataContext.Students.DeleteOnSubmit(Jame);
+            dataContext.SubmitChanges();
+
+            string connectionString = ConfigurationManager.ConnectionStrings["LinqToSQL.Properties.Settings.MiroDBConnectionString"].ConnectionString;
+            LinqToSqlDataClassesDataContext db = new LinqToSqlDataClassesDataContext(connectionString);
+
+            MainDataGrid.ItemsSource = db.Students;
+        }
     }
 }
